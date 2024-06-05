@@ -9,15 +9,14 @@ import java.util.List;
 public class DFS2667 {
 
     static int N, d, cnt;
-
     static int[][] board;
-    static int[] dr = { -1, 1, 0, 0 };
-    static int[] dc = { 0, 0, -1, 1 };
     static boolean[][] visited;
+    static int[] dr = {1, -1, 0, 0};
+    static int[] dc = {0, 0, 1, -1};
 
     public static int dfs(int r, int c) {
-        board[r][c] = 0;
-        for (int i=0; i<4; i++) {
+
+        for (int i=0; i<4; i++){
             int nr = r + dr[i];
             int nc = c + dc[i];
             if (0<=nr && nr<N && 0<=nc && nc<N) {
@@ -50,7 +49,7 @@ public class DFS2667 {
             for (int r=0; r<N; r++) {
                 for (int c=0; c<N; c++) {
                     if (board[r][c] == 1 && !visited[r][c]) {
-                        visited[r][c] = false;
+                        visited[r][c] = true;
                         d = 1;
                         d_list.add(dfs(r, c));
                         cnt += 1;
@@ -60,12 +59,14 @@ public class DFS2667 {
 
             System.out.println(cnt);
             Collections.sort(d_list);
-            for (Integer d : d_list) {
+            for(int d : d_list){
                 System.out.println(d);
             }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
 }
