@@ -35,7 +35,6 @@ public class BS2343 {
             }
             ans = hi;
             while (lo <= hi) {
-
                 mid = (lo+hi) / 2;
                 if (mid < maxLen){
                     lo = mid + 1;
