@@ -10,7 +10,6 @@ import java.util.StringTokenizer;
 public class Q2 {
 
     public static void main(String[] args) {
-
         try{
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             List<Integer> tList = new ArrayList<>();
@@ -28,5 +27,4 @@ public class Q2 {
 
         }
     }
-
 }
