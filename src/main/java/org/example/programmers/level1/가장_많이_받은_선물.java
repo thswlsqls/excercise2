@@ -7,7 +7,6 @@ public class 가장_많이_받은_선물 {
             int answer = 0;
 
             int fLength = friends.length;
-            int gLength = gifts.length;
             Map<String, Integer> map = new HashMap<>();
             for (int i=0; i<fLength; i++) {
                 map.put(friends[i], i);
