@@ -17,7 +17,7 @@ public class Q1 {
             }
             Collections.sort(resultList);
             System.out.println(resultList.get(resultList.size()));
-        }catch (Exception e){
+        } catch (Exception e){
 
         }
     }
