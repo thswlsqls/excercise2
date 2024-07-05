@@ -4,7 +4,6 @@ public class 붕대_감기 {
 
     class Solution {
         public int solution(int[] bandage, int health, int[][] attacks) {
-            int answer = 0;
             int maxH = health;
             int current = 0;
             for (int[] atack : attacks) {
