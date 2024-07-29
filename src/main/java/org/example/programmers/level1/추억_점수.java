@@ -16,7 +16,8 @@ public class 추억_점수 {
             for(String[] names : photo){
                 int pTot = 0;
                 for (String n : names) {
-                    pTot += pMap.containsKey(n) ? pMap.get(n) : 0;
+                    // pTot += pMap.containsKey(n) ? pMap.get(n) : 0;
+                    pTot += pMap.getOrDefault(n, 0);
                 }
                 answer[i++] = pTot;
             }
