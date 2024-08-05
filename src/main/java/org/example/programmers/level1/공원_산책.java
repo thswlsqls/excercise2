@@ -59,7 +59,6 @@ public class 공원_산책 {
             };
         }
         answer = new int[]{curY, curX};
-
         return answer;
     }
 
