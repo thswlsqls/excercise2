@@ -2,10 +2,14 @@ package org.example.programmers.level1;
 
 public class 바탕화면_정리 {
     public static void main(String[] args) {
-        String[] wallpaper = {".#...", "..#..", "...#."};
+        String[] wallpaper = {"..........", ".....#....", "......##..", "...##.....", "....#....."}; //= {".#...", "..#..", "...#."};
+
+        for(int i=0; i<wallpaper.length; i++){
+            System.out.println(wallpaper[i]);
+        }
+        System.out.println("y x " + wallpaper.length + " " + wallpaper[0].length());
+
         solution(wallpaper);
-        System.out.println(wallpaper.length);
-        System.out.println(wallpaper[0].length());
     }
 
     public static int[] solution(String[] wallpaper) {
@@ -22,7 +26,7 @@ public class 바탕화면_정리 {
             for (int x=0; x<xLen; x++) {
                 if (wallpaper[y].charAt(x) == '#'){
                     luy = Math.min(luy, y);
-                    lux = Math.min(lux, x);;
+                    lux = Math.min(lux, x);
                     break;
                 }
             }
@@ -40,7 +44,7 @@ public class 바탕화면_정리 {
             }
         }
 
-        answer = new int[]{lux, luy, rdx, rdy};
+        answer = new int[]{luy, lux, rdy+1, rdx+1};
         System.out.println(""+ lux + " " + luy + " " + rdx + " " + rdy);
         return answer;
     }
